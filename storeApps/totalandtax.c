@@ -10,15 +10,16 @@ char temp[3] = "";
 
 
 int main() {
-	puts("Enter price of items, X to end.\n\n");
-	while(temp != "X") {
+	puts("Enter price of items, X to end.");
+	while(1) {
 		scanf("Item Price: $%s", temp);
 		count++;
 		if (temp == "X") {
 			break;
 		}
-	}	
+		printf("%s\n", temp);
 		total = total + atoi(temp);
+	}	
 	scanf("Enter tax percent:  %3s", temp);
 	
 	tax = total * (atoi(temp) / 100);
